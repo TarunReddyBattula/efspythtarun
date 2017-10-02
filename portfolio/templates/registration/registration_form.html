@@ -1,0 +1,17 @@
+{% extends 'portfolio/base.html' %}
+{% load i18n %}
+
+
+{% block content %}
+<div class="container">
+  <h1>Register Now</h1>
+<form method="post" action=".">
+
+  {% csrf_token %}
+  <tr>{{ form.as_p }} </tr>
+
+  <input type="submit" value="{% trans 'Submit' %}" />
+
+</form>
+</div>
+{% endblock %}
